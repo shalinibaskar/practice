@@ -15,7 +15,13 @@ function Dashboard() {
           Authorization: `Bearer ${accessToken}`,
         },
       });
+      // token not expired
+      if (res.status == 200) {
+        console.log("okay");
+        const data = await res.json();
 
+        setUser(data);
+      }
       // token expired
       if (res.status === 401) {
         console.log("Access token expired");
@@ -33,7 +39,6 @@ function Dashboard() {
         const data = await res.json();
 
         setUser(data);
-        console.log("data from loaduser", data);
       }
     } catch (err) {
       console.log("error from fetching user", err);
@@ -42,7 +47,7 @@ function Dashboard() {
 
   useEffect(() => {
     loadUser();
-    console.log("load user called");
+    console.log("useeffecton every reload");
   }, []);
   return (
     <div>
