@@ -42,28 +42,51 @@ function Login() {
 
   return (
     <div>
-      <div className="loginComponent">
+      <h1 class="text-3xl font-bold underline">Hello world!</h1>
+      <div className="LoginWrapper">
         <form onSubmit={handleSubmit}>
-          <label>
-            Username:
+          <div>
+            <label
+              for="first_name"
+              class="block mb-2.5 text-sm font-medium text-heading"
+            >
+              Username
+            </label>
             <input
               type="text"
+              id="first_name"
+              class="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body"
+              placeholder="Username"
               value={name}
               onChange={(e) => setName(e.target.value)}
+              required
             />
-          </label>
-          <br />
-          <label>
-            Password:
+          </div>
+          <div>
+            <label
+              for="first_name"
+              class="block mb-2.5 text-sm font-medium text-heading"
+            >
+              Password
+            </label>
             <input
-              type="password"
+              type="text"
+              id="first_name"
+              class="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body"
+              placeholder="Password"
               value={pass}
               onChange={(e) => setPass(e.target.value)}
+              required
             />
-          </label>
-          <br />
+          </div>
+
           <p>{errormsg}</p>
-          <button type="submit">Login</button>
+          <button
+            class="bg-sky-500 hover:bg-sky-700 px-5 py-2 m-5 rounded-md"
+            type="submit"
+          >
+            Login
+          </button>
         </form>
       </div>
     </div>
