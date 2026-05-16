@@ -4,7 +4,7 @@ import Logout from "./Logout";
 function Dashboard() {
   return (
     <div>
-      Welcome user
+      Welcome user shalini
       <Logout />
     </div>
   );
