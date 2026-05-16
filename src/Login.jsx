@@ -14,6 +14,7 @@ function Login() {
     e.preventDefault();
 
     try {
+      //logging in and geting a token
       const response = await fetch("https://dummyjson.com/auth/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -32,8 +33,9 @@ function Login() {
       }
 
       // setData(result);
-      console.log(result.accessToken);
+      console.log("name", result);
       localStorage.setItem("token", result.accessToken);
+      localStorage.setItem("refreshToken", result.refreshToken);
       navigate("/Dashboard");
     } catch (err) {
       console.log("err", err);
