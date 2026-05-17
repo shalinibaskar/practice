@@ -44,13 +44,12 @@ function Login() {
 
   return (
     <div>
-      <h1 class="text-3xl font-bold underline">Hello world!</h1>
-      <div className="LoginWrapper">
-        <form onSubmit={handleSubmit}>
-          <div>
+      <div class="m-10">
+        <form onSubmit={handleSubmit} class="w-1/2 mx-auto">
+          <div class="flex flex-start mb-3 gap-3">
             <label
               for="first_name"
-              class="block mb-2.5 text-sm font-medium text-heading"
+              class="block text-sm font-medium text-heading text-right w-1/2 justify-end mt-2"
             >
               Username
             </label>
@@ -64,16 +63,16 @@ function Login() {
               required
             />
           </div>
-          <div>
+          <div class="flex flex-start gap-3">
             <label
               for="first_name"
-              class="block mb-2.5 text-sm font-medium text-heading"
+              class="block mb-2.5 text-sm font-medium text-heading text-right w-1/2 justify-end mt-2"
             >
               Password
             </label>
             <input
-              type="text"
-              id="first_name"
+              type="password"
+              id="password"
               class="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body"
               placeholder="Password"
               value={pass}
@@ -84,7 +83,7 @@ function Login() {
 
           <p>{errormsg}</p>
           <button
-            class="bg-sky-500 hover:bg-sky-700 px-5 py-2 m-5 rounded-md"
+            class="inline-block text-center bg-sky-500 hover:bg-sky-700 px-5 py-2 mt-5 rounded-md cursor-pointer text-white"
             type="submit"
           >
             Login
