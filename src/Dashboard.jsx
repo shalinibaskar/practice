@@ -77,9 +77,6 @@ function Dashboard() {
     console.log("useeffecton every reload", products);
   }, []);
 
-  useEffect(() => {
-    console.log("Updated state:", products);
-  }, [products]);
   return (
     <>
       <Logout />
